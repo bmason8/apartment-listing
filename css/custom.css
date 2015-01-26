@@ -17,9 +17,7 @@ img {
 }
 
 header {
-  /*background-color: #70DBDB;*/
-  /*background-color: #ffb347;*/
-  background-color: #F1EDD0;
+  background-color: #1693A5;
   max-height: 20%;
 }
 
@@ -38,7 +36,7 @@ nav li {
 
 nav a {
   text-decoration: none;
-  color: #666666;
+  color: #F1EDD0;
 }
 
 nav a:hover {
@@ -46,11 +44,12 @@ nav a:hover {
 }
 
 footer {
-  background-color: #F1EDD0;;
+  background-color: #1693A5;;
   position:absolute;
   bottom: 0;
   padding-top: 2%;
   height: 80px;
+  font-size: 1.25em;
 }
 
 .float-left {
@@ -66,8 +65,7 @@ footer {
 }
 
 .main-menu ul{
-margin: 4% auto auto 15%;
-/*position: fixed;*/
+margin: 4% auto auto 25%;
 font-size: 2em;
 }
 
