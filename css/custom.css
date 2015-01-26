@@ -8,3 +8,6 @@ header li {
   display: inline;
   list-style-type: none;
 }
+.property {
+  background-color: #70DBDB;
+}
