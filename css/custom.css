@@ -1,10 +1,75 @@
 /*Custom CSS Page*/
+@import url(http://fonts.googleapis.com/css?family=Amaranth:700,400);
 
-header img {
+body {
+  background-color: #70DBDB;
+  margin: 0 auto;
+  background-image: url(../img/background-apartment.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+}
+
+img {
+  width: 100%;
+  display: inline-block;
+}
+
+header {
+  background-color: #1693A5;
+  max-height: 20%;
+}
+
+p {
+  text-align: right;
+  font-size: 2em;
+  margin: 1% 20% auto auto;
+}
+
+nav li {
+  display: inline;
+  list-style-type: none;
+  padding: 2%;
+  font-family: 'Amaranth', sans-serif;
+}
+
+nav a {
+  text-decoration: none;
+  color: #F1EDD0;
+}
+
+nav a:hover {
+  color: #ffb347;
+}
+
+footer {
+  background-color: #1693A5;;
+  position:absolute;
+  bottom: 0;
+  padding-top: 2%;
+  height: 80px;
+  font-size: 1.25em;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
   float: right;
 }
 
-header li {
-  display: inline;
-  list-style-type: none;
+.full-width {
+  width:100%;
+}
+
+.main-menu ul{
+margin: 4% auto auto 25%;
+font-size: 2em;
+}
+
+.logo {
+  display: inline-block;
+  margin: 0 15% 0% auto;
 }

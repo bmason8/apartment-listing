@@ -15,26 +15,34 @@
 
 </head>
 <body>
-  <!-- Begin Grid -->
-  <div class="grid">
+  <div class="grid.flex">
     <header class="clearfix">
-      <ul>
-        <li>Home</li>
-        <li>Available Apartments</li>
-        <li>About Us</li>
-      </ul>
-      <img src="img/apartment-logo.png" />
+      <nav class="main-menu col_7 float-left">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="listing.html">Available Apartments</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+      <section class="logo float-right center">
+        <img src="img/apartment-logo-small.png" />
+      </section>
     </header>
-    <main>
+    <main class="full-width clearfix">
       <h1> This will be the main section</h1>
     </main>
-    <footer>
-      <p>This will be the footer</p>
+    <footer class="full-width center">
+      <nav>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+        </ul>
+      </nav>
     </footer>
+    <!-- Javascript -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/kickstart.js"></script>
   </div>
-  <!-- End Grid -->
-  <!-- Javascript -->
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/kickstart.js"></script>
 </body>
 </html>
