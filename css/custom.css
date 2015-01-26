@@ -1,0 +1,10 @@
+/*Custom CSS Page*/
+
+header img {
+  float: right;
+}
+
+header li {
+  display: inline;
+  list-style-type: none;
+}
