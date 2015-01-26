@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- META -->
+  <title>Seattle Apartments</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="keywords" content="apartments for rent, Seattle apartments">
+  <meta name="description" content="Find the apartment you're looking for">
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="css/kickstart.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+  <link rel="stylesheet" type+"text/css" href="css/custom.css" media="all" />
+
+</head>
+  <body>
+    <select id="locationSelect">
+      <option value="seattle" id="seattle">Seattle</option>
+      <option value="renton" id="renton">Renton</option>
+      <option value="capitolHill" id="capitolHill">Capitol Hill</option>
+    </select>
+    <select id="petSelect">
+      <input type="checkbox" value="pets">I own a pet!</input>
+    </select>
+    <button id="list">SUBMIT</button>
+
+    <main>
+    <div class="property" id="" data-location="seattle" data-price="800" data-pets="true">
+      <img src="">
+      <ul>
+        <li>Location: Seattle</li>
+      </ul>
+    </div>
+    <div class="property" id="" data-location="seattle" data-price="900" data-pets="false">
+      <img src="">
+      <ul>
+        <li>Location: Seattle</li>
+      </ul>
+    </div>
+    <div class="property" id="" data-location="renton" data-price="850" pets="true">
+      <img src="">
+      <ul>
+        <li>Location: Renton</li>
+      </ul>
+    </div>
+    <div class="property" id="" data-location="renton" data-price="1000" data-pets="false">
+      <img src="">
+      <ul>
+        <li>Location: Renton</li>
+      </ul>
+    </div>
+    <div class="property" id="" data-location="capitolHill" data-price="900" data-pets="true">
+      <img src="">
+      <ul>
+        <li>Location: Capitol Hill</li>
+      </ul>
+    </div>
+    <div class="property" id="" data-location="capitolHill" data-price="875" data-pets="false">
+      <img src="">
+      <ul>
+        <li>Location: Capitol Hill</li>
+      </ul>
+    </div>
+    <div class="property" id="" data-location="fremont" data-price="950" data-pets="true">
+      <img src="">
+      <ul>
+        <li>Location: Fremont</li>
+      </ul>
+    </div>
+    <div class="property" id="" data-location="fremont" data-price="1100" data-pets="false">
+      <img src="">
+      <ul>
+        <li>Location: Fremont</li>
+      </ul>
+    </div>
+    </main>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/kickstart.js"></script>
+  <script type="text/javascript" src="js/listing.js"></script>
+</body>
+</html>
