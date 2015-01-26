@@ -35,22 +35,25 @@ $(function() {
 //("[attribute='value']"))
 
 function Search() {
-switch ($("#locationSelect").val()) {
-  case "seattle":
-    $(".property").each(function () {
-      if(($(this).data("location")) != "seattle"){
-        $(this).fadeOut(1000);
-      }
-    })
-    break;
-  case "renton":
-    console.log("It worked for Renton");
-    break;
-  case "capitolHill":
-    console.log("It worked for Capitol Hill")
-    break;
-  default:
-    console.log("I'm the default behaviour");
+  switch ($("#locationSelect").val()) {
+    case "seattle":
+      $(".property").each(function () {
+        if(($(this).data("location")) != "seattle"){
+          $(this).fadeOut(1000);
+        }
+        else if($("input:checked").data("pets") {
+            $(this).fadeOut(1000);
+        }
+      });
+      break;
+    case "renton":
+      console.log("It worked for Renton");
+      break;
+    case "capitolHill":
+      console.log("It worked for Capitol Hill")
+      break;
+    default:
+      console.log("I'm the default behaviour");
 
 }
 }
