@@ -7,12 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="keywords" content="apartments for rent, Seattle apartments">
   <meta name="description" content="Find the apartment you're looking for">
-
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/kickstart.css" media="all" />
   <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
   <link rel="stylesheet" type+"text/css" href="css/custom.css" media="all" />
-
 </head>
   <body>
     <div id="filters">
@@ -23,6 +21,13 @@
         <option value="capitolHill" id="capitolHill">Capitol Hill</option>
         <option value="fremont" id="fremont">Fremont</option>
       </select>
+      <select id ="bed">
+        <option>Choose Beds</option>
+        <option value="studio">Studio</option>
+        <option value="1bed">1 bed</option>
+        <option value="2bed">2 beds</option>
+        <option value="3bed">3 beds</option>
+      </select>
       <input type="checkbox" data-pets="true">I own a pet!</input>
       <input type="text" placeholder="Min Price"></input>
       <input type="text" placeholder="Max Price"></input>
@@ -30,13 +35,13 @@
     </div>
     
     <main>
-    <div class="property" id="" data-location="seattle" data-price="800" data-pets="yes" value="true">
+    <div class="property" id="" data-location="seattle" data-price="800" data-pets="yes" data-bed="studio">
       <img src="">
       <ul>
         <li>Location: Seattle</li>
       </ul>
     </div>
-    <div class="property" id="" data-location="seattle" data-price="900" data-pets="no" value="false">
+    <div class="property" id="" data-location="seattle" data-price="900" data-pets="no" data-bed="1bed">
       <img src="">
       <ul>
         <li>Location: Seattle</li>

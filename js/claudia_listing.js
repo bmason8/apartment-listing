@@ -1,5 +1,5 @@
 $(function() {
-  var minPrice = 
+  
   /* this function is used for a basic filter search by the user. The user only searches using the city drop down list */
   function locationSearch() {
   	switch ($("#locationSelect").val()) {
@@ -11,6 +11,9 @@ $(function() {
           if ($("input:checkbox").is(":checked")) {
             //call this function only if checkbox is selected
             petCheckbox();
+          }
+          if ($("#bed option:selected")) {
+            bedSelector();
           }
   			});
   		break;
@@ -59,6 +62,27 @@ $(function() {
         $(this).fadeOut(1000);
       }
     });
+  }
+
+  function bedSelector() {
+    switch ($("#bed").val()) {
+      case "studio":
+        $(".property").each(function() {
+          if ($(this).data("bed") != "studio") {
+            $(this).fadeOut(1000);
+          }
+        });
+      break;
+      case "1bed":
+
+      break;
+      case "2beds":
+
+      break;
+      case "3beds":
+
+      break;
+    }
   }
   
   $("#list").on("click", locationSearch);
