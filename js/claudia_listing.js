@@ -1,24 +1,16 @@
 $(function() {
-
-  // var seattle = function() {
-  //   switch ($('.property').data('pets')) {
-  //     case "true":
-  //       $('.property').each
-  //   }
-  // }
-  // is(":checked") && $("input").data("pets") == "true")
-  
-  function Search() {
+  var minPrice = 
+  /* this function is used for a basic filter search by the user. The user only searches using the city drop down list */
+  function locationSearch() {
   	switch ($("#locationSelect").val()) {
   		case "seattle":
   			$(".property").each(function() {
   				if (($(this).data("location") != "seattle")) {
-            if ($("input:checkbox").is(":checked")) {
-                // $(".property").data("pets").fadeIn(1000);
-                $(".property").data("pets", "false").fadeOut(1000);
-            } else {
               $(this).fadeOut(1000);
-            }
+          }
+          if ($("input:checkbox").is(":checked")) {
+            //call this function only if checkbox is selected
+            petCheckbox();
           }
   			});
   		break;
@@ -27,22 +19,49 @@ $(function() {
   				if ($(this).data("location") != "renton") {
   					$(this).fadeOut(1000);
   				}
+          if ($("input:checkbox").is(":checked")) {
+            //call this function only if checkbox is selected
+            petCheckbox();
+          }
   			});	
-   		break
+   		break;
   		case "capitolHill":
   			$(".property").each(function() {
   				if ($(this).data("location") != "capitolHill") {
   					$(this).fadeOut(1000);
   				}
+          if ($("input:checkbox").is(":checked")) {
+            //call this function only if checkbox is selected
+            petCheckbox();
+          }
   			});	
   		break;
+      case "fremont":
+        $(".property").each(function() {
+          if ($(this).data("location") != "fremont") {
+            $(this).fadeOut(1000);
+          }
+          if ($("input:checkbox").is(":checked")) {
+            //call this function only if checkbox is selected
+            petCheckbox();
+          }
+        }); 
+      break;
   		default:
-  			alert("Nothing is Selected");
+  			alert("Nothing is Selected!!");
   	}
   }
-
+  /*this function will be called if user selects checkbox that states 
+  he or she owns a pet and would like to filter the apartment listings based off pet availability*/
+  function petCheckbox() {
+    $(".property").each(function() {
+      if ($(this).data("pets") != "yes") {
+        $(this).fadeOut(1000);
+      }
+    });
+  }
   
-  $("#list").on("click", Search);
+  $("#list").on("click", locationSearch);
 
 
 });
