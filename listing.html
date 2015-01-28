@@ -10,7 +10,6 @@
 
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/kickstart.css" media="all" />
-<<<<<<< HEAD
   <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
   <link rel="stylesheet" type+"text/css" href="css/custom.css" media="all" />
   <link rel="stylesheet" type="text/css" href="css/propertyBox.css" media="all" />
@@ -30,15 +29,29 @@
       </section>
     </header>
     <main class="full-width center">
-    <select id="locationSelect">
-      <option value="seattle" id="seattle">Seattle</option>
-      <option value="renton" id="renton">Renton</option>
-      <option value="capitolHill" id="capitolHill">Capitol Hill</option>
-    </select>
-    <select id="petSelect">
-      <input type="checkbox" value="pets">I own a pet!</input>
-    </select>
+    <div id="filters">
+      <select id="locationSelect">
+        <option>[Select City]</option>
+        <option value="seattle" id="seattle">Seattle</option>
+        <option value="renton" id="renton">Renton</option>
+        <option value="capitolHill" id="capitolHill">Capitol Hill</option>
+        <option value="fremont" id="fremont">Fremont</option>
+      </select>
+      <select id ="bed">
+          <option>Choose Beds</option>
+          <option value="studio">Studio</option>
+          <option value="1bed">1 bed</option>
+          <option value="2beds">2 beds</option>
+          <option value="3beds">3 beds</option>
+      </select>
+      <input type="checkbox" data-pets="true">I own a pet!</input>
+      <input type="text" placeholder="Min Price"></input>
+      <input type="text" placeholder="Max Price"></input>
       <button id="list">SUBMIT</button>
+    </div>
+    <!-- <select id="petSelect">
+      <input type="checkbox" value="pets">I own a pet!</input>
+    </select> -->
     <div id="listings">
     </div>
       <section class="gallery col_5 apartment-gallery">
