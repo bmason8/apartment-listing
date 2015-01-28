@@ -1,6 +1,5 @@
 $(function() {
-  var minPrice = document.getElementById('min-price').value;
-  var maxPrice = document.getElementById('max-price').value;
+ 
   /* this function is used for a basic filter search by the user. The user only searches using the city drop down list */
   function locationSearch() {
   	switch ($("#locationSelect").val()) {
@@ -104,7 +103,14 @@ $(function() {
   }
 
   function priceFilter() {
+    var minPrice = document.getElementById('min-price').value;
+    var maxPrice = document.getElementById('max-price').value;
 
+    $(".property").each(function() {
+      if ($(this).data("price") < minPrice) {
+        $(this).show()
+      }
+    })
   }
   
   $("#list").on("click", locationSearch);
