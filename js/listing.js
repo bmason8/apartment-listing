@@ -6,10 +6,11 @@ function NewProperty(propName, bed, price, pets, location, imageName) {
     this.pets = pets;
     this.location = location;
     this.imageName = imageName;
+    this.description = description;
   }
 
 NewProperty.prototype.toHtml = function() {
-  return '<div class="propertyBox" data-price="' + this.price + '" data-bed="' + this.bed + '" + data-pets="' + this.pets + '" + data-location="' + this.location + '"><img src="img/' + this.imageName + '" />'  + '<h1>' + this.propName + '</h1>' + '<ul><li>$ ' + this.price + '</li><li>' + this.bed + '</li>' + '<li>' + this.pets + '</li></ul><p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p></div>';
+  return '<li><section class="propertyBox caption" data-price="' + this.price + '" data-bed="' + this.bed + '" + data-pets="' + this.pets + '" + data-location="' + this.location + '"><a title="' + this.description + '" href="img/' + this.imageName +'"/><img src="img/' + this.imageName + '" width="100" height="100"/></a><section class="description"><h2>' + this.propName + '</h2>' + '<ul><li>$ ' + this.price + '</li><li>' + this.bed + '</li>' + '<li>' + this.pets + '</li></ul></section></section></li>';
 }
 
 var addProperty = function(propName, bed, price, pets, location, imageName) {
@@ -17,7 +18,7 @@ var addProperty = function(propName, bed, price, pets, location, imageName) {
     $("#listings").append(property.toHtml());
   }
 
-addProperty("Trendy Apartment",   2, 1100, "Yes", "Seattle",      "property1.jpg");
+addProperty("Trendy Apartment",   2, 1100, "Yes", "Seattle",      "property1.jpg", "This is a dope ass apartment");
 addProperty("Total Dive",         3, 1800, "No",  "Capitol-Hill", "property2.jpg");
 addProperty("Charming Space",     2, 950,  "Yes", "Renton",       "property3.jpg");
 addProperty("Vintage Home",       3, 1500, "No",  "Renton",       "property4.jpg");
@@ -57,7 +58,7 @@ addProperty("The Love Pad",       1, 750,  "Yes", "Capitol-Hill", "property6.jpg
             //call this function if bed selector is selected
             bedSelector();
           }
-        }); 
+        });
       break;
       case "capitolHill":
         $(".propertyBox").each(function() {
@@ -68,7 +69,7 @@ addProperty("The Love Pad",       1, 750,  "Yes", "Capitol-Hill", "property6.jpg
             //call this function only if checkbox is selected
             petCheckbox();
           }
-        }); 
+        });
       break;
       case "fremont":
         $(".propertyBox").each(function() {
@@ -79,13 +80,13 @@ addProperty("The Love Pad",       1, 750,  "Yes", "Capitol-Hill", "property6.jpg
             //call this function only if checkbox is selected
             petCheckbox();
           }
-        }); 
+        });
       break;
       default:
         alert("Nothing is Selected!!");
     }
   }
-  /*this function will be called if user selects checkbox that states 
+  /*this function will be called if user selects checkbox that states
   he or she owns a pet and would like to filter the apartment listings based off pet availability*/
   function petCheckbox() {
     $(".propertyBox").each(function() {
@@ -134,7 +135,7 @@ addProperty("The Love Pad",       1, 750,  "Yes", "Capitol-Hill", "property6.jpg
 
     $(".property").each(function() {
       if ($(this).data("price") < minPrice) {
-        
+
       } else if (($(this).data("price") >= minPrice) && ($(this).data("price") < maxPrice)) {
 
       } else if ($(this).data("price") >= maxPrice) {
@@ -144,7 +145,7 @@ addProperty("The Love Pad",       1, 750,  "Yes", "Capitol-Hill", "property6.jpg
       }
     });
   }
-  
+
   $("#list").on("click", locationSearch);
 
 
