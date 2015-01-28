@@ -10,7 +10,7 @@ function NewProperty(propName, bed, price, pets, location, imageName) {
   }
 
 NewProperty.prototype.toHtml = function() {
-  return '<li><section class="propertyBox caption" data-price="' + this.price + '" data-bed="' + this.bed + '" + data-pets="' + this.pets + '" + data-location="' + this.location + '"><a title="' + this.description + '" href="img/' + this.imageName +'"/><img src="img/' + this.imageName + '" width="100" height="100"/></a><section class="description"><h2>' + this.propName + '</h2>' + '<ul><li>$ ' + this.price + '</li><li>' + this.bed + '</li>' + '<li>' + this.pets + '</li></ul></section></section></li>';
+  return '<li><section class="propertyBox caption" data-price="' + this.price + '" data-bed="' + this.bed + '" + data-pets="' + this.pets + '" + data-location="' + this.location + '"><a title="' + this.description + '" href="img/' + this.imageName +'"/><img src="img/' + this.imageName + '" width="100" height="100"/></a><section class="description"><h2>' + this.propName + '</h2>' + '<ul><li>$ ' + this.price + '</li><li>' + this.bed + '</li>' + '<li>' + this.pets + '</li></ul></section></section></li>'
 }
 
 var addProperty = function(propName, bed, price, pets, location, imageName) {
