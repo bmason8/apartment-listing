@@ -1,5 +1,5 @@
 $(function() {
-  var $fadeout = 
+  
   /* this function is used for a basic filter search by the user. The user only searches using the city drop down list */
   function locationSearch() {
   	switch ($("#locationSelect").val()) {
