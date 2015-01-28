@@ -48,7 +48,7 @@ footer {
   position:absolute;
   bottom: 0;
   padding-top: 2%;
-  height: 80px;
+  height: 12%;
   font-size: 1.25em;
 }
 
@@ -75,5 +75,18 @@ font-size: 2em;
 }
 
 .apartment-gallery {
-  margin-left: 28%;
+  margin-left: 30%;
+}
+
+.social {
+  padding-top: 31%;
+}
+
+.apartment-gallery li {
+  list-style: none;
+  display: inline-block;
+}
+
+.apartment-gallery {
+/*  display: inline-block;*/
 }
