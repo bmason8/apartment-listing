@@ -10,12 +10,26 @@
 
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/kickstart.css" media="all" />
-  <!-- <link rel="stylesheet" type="text/css" href="css/style.css" media="all" /> -->
-  <!-- <link rel="stylesheet" type+"text/css" href="css/custom.css" media="all" /> -->
+<<<<<<< HEAD
+  <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+  <link rel="stylesheet" type+"text/css" href="css/custom.css" media="all" />
   <link rel="stylesheet" type="text/css" href="css/propertyBox.css" media="all" />
-
 </head>
-  <body>
+<body>
+  <div class="grid.flex">
+    <header class="clearfix">
+      <nav class="main-menu col_7 float-left">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="listing.html">Available Apartments</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+      <section class="logo float-right center">
+        <img src="img/apartment-logo-small.png" />
+      </section>
+    </header>
+    <main class="full-width center">
     <select id="locationSelect">
       <option value="seattle" id="seattle">Seattle</option>
       <option value="renton" id="renton">Renton</option>
@@ -27,10 +41,38 @@
       <button id="list">SUBMIT</button>
     <div id="listings">
     </div>
-    <main>
+      <section class="gallery col_5 apartment-gallery">
+        <ul>
+        <li><section class="propertyBox caption"><a title="This is where the description and info will go." href="http://placehold.it/600x450/4D99E0/ffffff.png&text=Property Name"><img src="http://placehold.it/100x100/4D99E0/ffffff.png&text=100x100" width="100" height="100" /></a>
+
+        </section></li>
+        <li><section class="propertyBox"><a href="http://placehold.it/600x450/75CC00/ffffff.png&text=600x450"><img src="http://placehold.it/100x100/75CC00/ffffff.png&text=100x100" width="100" height="100" /></a></section></li>
+        <li><section class="propertyBox"><a href="http://placehold.it/600x450/E49800/ffffff.png&text=600x450"><img src="http://placehold.it/100x100/E49800/ffffff.png&text=100x100" width="100" height="100" /></a></section></li>
+        <li><section class="propertyBox"><a href="http://placehold.it/600x450/E4247E/ffffff.png&text=600x450"><img src="http://placehold.it/100x100/E4247E/ffffff.png&text=100x100" width="100" height="100" /></a></section></li>
+        <li><section class="propertyBox"><a href="http://placehold.it/600x450/00C6E4/ffffff.png&text=600x450"><img src="http://placehold.it/100x100/00C6E4/ffffff.png&text=100x100" width="100" height="100" /></a></section></li>
+        <li><section class="propertyBox"><a href="http://placehold.it/600x450/E4DB0F/ffffff.png&text=600x450"><img src="http://placehold.it/100x100/E4DB0F/ffffff.png&text=100x100" width="100" height="100" /></a></section></li>
+        <li><section class="propertyBox"><a href="http://placehold.it/600x450/7400E4/ffffff.png&text=600x450"><img src="http://placehold.it/100x100/7400E4/ffffff.png&text=100x100" width="100" height="100" /></a></section></li>
+       <li><section class="propertyBox"><a href="http://placehold.it/600x450/C50000/ffffff.png&text=600x450"><img src="http://placehold.it/100x100/C50000/ffffff.png&text=100x100" width="100" height="100" /></a></section></li>
+      </ul>
+      </section>
+      <a href="http://www.facebook.com"><img class="social" src="img/facebook-icon.png" /></a>
+      <a href="httP://www.twitter.com"><img class="social" src="img/twitter-icon.png" /></a>
+      <a href="http://www.google.com"><img class="social" src="img/google-plus-icon.png" /></a>
+      <a href="http://www.pinterest.com"><img class="social" src="img/pinterest-icon.png" /></a>
     </main>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/kickstart.js"></script>
+    <footer class="full-width center">
+      <nav>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+        </ul>
+      </nav>
+    </footer>
+    <!-- Javascript -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/kickstart.js"></script>
   <script type="text/javascript" src="js/listing.js"></script>
+  </div>
 </body>
 </html>
