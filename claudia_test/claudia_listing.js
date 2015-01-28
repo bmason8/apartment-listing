@@ -1,5 +1,7 @@
 $(function() {
-  
+  // function hide(element) {
+  //   $(this).fadeOut(1000);
+  // }
   /* this function is used for a basic filter search by the user. The user only searches using the city drop down list */
   function locationSearch() {
   	switch ($("#locationSelect").val()) {
@@ -15,6 +17,10 @@ $(function() {
           if ($("#bed option:selected")) {
             //call this function if bed selector is selected
             bedSelector();
+          }
+          if (!($("input:text[value='']"))) {
+            //call this function if input text has values
+            priceFilter();
           }
   			});
   		break;
@@ -102,19 +108,28 @@ $(function() {
     }
   }
 
+/*this function is to filter listings based off of the user's minimum price and maximum price that are placed in the input text element */
   function priceFilter() {
+    //get the value for each input text: Min Price & Max Price
     var minPrice = document.getElementById('min-price').value;
     var maxPrice = document.getElementById('max-price').value;
 
     $(".property").each(function() {
-      if ($(this).data("price") < minPrice) {
-        
+      if ($(this).data("price") <= minPrice) {
+        if ($(this).data("price") < minPrice) {
+          $(this).fadeOut(1000);
+        }
       } else if (($(this).data("price") >= minPrice) && ($(this).data("price") < maxPrice)) {
-
-      } else if ($(this).data("price") >= maxPrice) {
-
+        if ($(this).data("price") < minPrice) {
+          $(this).fadeOut(1000);
+        }
+        if ($(this).data("price") > maxPrice) {
+          $(this).fadeOut(1000);
+        }
+      } else if ($(this).data("price") > maxPrice)  {
+          $(this).fadeOut(1000);
       } else {
-        $(this).show();
+        console.log("still show listings");
       }
     });
   }

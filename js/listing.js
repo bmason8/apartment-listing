@@ -42,6 +42,11 @@ addProperty("The Love Pad",       1, 750,  "Yes", "Capitol-Hill", "property6.jpg
             //call this function if bed selector is selected
             bedSelector();
           }
+          if (!($("input:text[value='']"))) {
+            //call this function if input text has values
+            priceFilter();
+            console.log("i'm working");
+          }
         });
       break;
       case "renton":
@@ -57,6 +62,10 @@ addProperty("The Love Pad",       1, 750,  "Yes", "Capitol-Hill", "property6.jpg
             //call this function if bed selector is selected
             bedSelector();
           }
+          if (!($("input:text[value='']"))) {
+            //call this function if input text has values
+            priceFilter();
+          }
         }); 
       break;
       case "capitolHill":
@@ -68,6 +77,10 @@ addProperty("The Love Pad",       1, 750,  "Yes", "Capitol-Hill", "property6.jpg
             //call this function only if checkbox is selected
             petCheckbox();
           }
+          if (!($("input:text[value='']"))) {
+            //call this function if input text has values
+            priceFilter();
+          }
         }); 
       break;
       case "fremont":
@@ -78,6 +91,10 @@ addProperty("The Love Pad",       1, 750,  "Yes", "Capitol-Hill", "property6.jpg
           if ($("input:checkbox").is(":checked")) {
             //call this function only if checkbox is selected
             petCheckbox();
+          }
+          if (!($("input:text[value='']"))) {
+            //call this function if input text has values
+            priceFilter();
           }
         }); 
       break;
@@ -128,19 +145,28 @@ addProperty("The Love Pad",       1, 750,  "Yes", "Capitol-Hill", "property6.jpg
     }
   }
 
+  /*this function is to filter listings based off of the user's minimum price and maximum price that are placed in the input text element */
   function priceFilter() {
+    //get the value for each input text: Min Price & Max Price
     var minPrice = document.getElementById('min-price').value;
     var maxPrice = document.getElementById('max-price').value;
 
-    $(".property").each(function() {
-      if ($(this).data("price") < minPrice) {
-        
+    $(".propertyBox").each(function() {
+      if ($(this).data("price") <= minPrice) {
+        if ($(this).data("price") < minPrice) {
+          $(this).fadeOut(1000);
+        }
       } else if (($(this).data("price") >= minPrice) && ($(this).data("price") < maxPrice)) {
-
-      } else if ($(this).data("price") >= maxPrice) {
-
+        if ($(this).data("price") < minPrice) {
+          $(this).fadeOut(1000);
+        }
+        if ($(this).data("price") > maxPrice) {
+          $(this).fadeOut(1000);
+        }
+      } else if ($(this).data("price") > maxPrice)  {
+          $(this).fadeOut(1000);
       } else {
-        $(this).show();
+        console.log("still show listings");
       }
     });
   }
