@@ -1,5 +1,6 @@
 $(function() {
-  
+  var minPrice = document.getElementById('min-price').value;
+  var maxPrice = document.getElementById('max-price').value;
   /* this function is used for a basic filter search by the user. The user only searches using the city drop down list */
   function locationSearch() {
   	switch ($("#locationSelect").val()) {
@@ -13,6 +14,7 @@ $(function() {
             petCheckbox();
           }
           if ($("#bed option:selected")) {
+            //call this function if bed selector is selected
             bedSelector();
           }
   			});
@@ -25,6 +27,10 @@ $(function() {
           if ($("input:checkbox").is(":checked")) {
             //call this function only if checkbox is selected
             petCheckbox();
+          }
+          if ($("#bed option:selected")) {
+            //call this function if bed selector is selected
+            bedSelector();
           }
   			});	
    		break;
@@ -63,7 +69,7 @@ $(function() {
       }
     });
   }
-
+  /*this function will be called in the locationSearch function. depending on the user's selection, a specific case will be run. */
   function bedSelector() {
     switch ($("#bed").val()) {
       case "studio":
@@ -74,18 +80,33 @@ $(function() {
         });
       break;
       case "1bed":
-
+        $(".property").each(function() {
+          if ($(this).data("bed") != "1bed") {
+            $(this).fadeOut(1000);
+          }
+        });
       break;
       case "2beds":
-
+        $(".property").each(function() {
+          if ($(this).data("bed") != "2beds") {
+            $(this).fadeOut(1000);
+          }
+        });
       break;
       case "3beds":
-
+      $(".property").each(function() {
+          if ($(this).data("bed") != "3beds") {
+            $(this).fadeOut(1000);
+          }
+        });
       break;
     }
   }
+
+  function priceFilter() {
+
+  }
   
   $("#list").on("click", locationSearch);
-
 
 });
