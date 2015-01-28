@@ -1,9 +1,15 @@
 /*Custom CSS Page*/
 @import url(http://fonts.googleapis.com/css?family=Amaranth:700,400);
 
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 body {
   background-color: #70DBDB;
-  margin: 0 auto;
+  /*margin: 0 auto;*/
+  margin: 0 0 80px; /* bottom = footer height */
   background-image: url(../img/background-apartment.jpg);
   background-position: center;
   background-size: cover;
@@ -44,11 +50,16 @@ nav a:hover {
 }
 
 footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 80px;
+  width: 100%;
   background-color: #1693A5;;
-  position:absolute;
+  /*position:absolute;*/
   bottom: 0;
   padding-top: 2%;
-  height: 12%;
+  /*height: 12%;*/
   font-size: 1.25em;
 }
 
@@ -67,6 +78,12 @@ footer {
 .main-menu ul{
 margin: 4% auto auto 25%;
 font-size: 2em;
+min-width: 600px;
+display: inline-block;
+}
+
+.main-site ul {
+  /*margin-bottom: 105px;*/
 }
 
 .logo {
@@ -76,17 +93,59 @@ font-size: 2em;
 
 .apartment-gallery {
   margin-left: 30%;
+  margin-right: 30%;
 }
 
 .social {
   padding-top: 31%;
+  margin: 0 auto;
 }
 
 .apartment-gallery li {
   list-style: none;
-  display: inline-block;
+  /*display: inline-block;*/
 }
 
 .apartment-gallery {
-/*  display: inline-block;*/
+  /*display: inline-block;*/
+}
+
+.propertyBox h2 {
+  /*float: right;*/
+  font-size: 1.5em;
+  display: block;
+}
+
+.propertyBox p {
+  /*float: right;*/
+  font-size: 1em;
+  display: inline-block;
+}
+
+.propertyBox img {
+  float: left;
+}
+
+.propertyBox li {
+  list-style: disc;
+}
+
+.description {
+  float: right;
+  margin-right: 25%;
+  text-align: left;
+}
+
+@media (max-width: 850px) {
+  .main-menu ul{
+    font-size: 1.5em;
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 700px) {
+  .main-menu ul{
+    margin: 4% auto auto 10%;
+    display: inline;
+  }
 }
