@@ -10,21 +10,21 @@
   border-bottom-style: solid;
   border-color: #ffB347;
 }
-ul {
+.propertyBox ul {
   width: 130px;
   margin: 0;
   float: left;
 }
 .propertyBox li {
 }
-img {
+.propertyBox img {
   display: inline-block;
   width: 300px;
   height: 200px;
   float: left;
   margin-right: 5%;
 }
-p {
+.propertyBox p {
   font-size: 12px;
   width: 280px;
   float: right;
