@@ -1,5 +1,5 @@
 $(function() {
-function NewProperty(propName, bed, price, pets, location, imageName) {
+function NewProperty(propName, bed, price, pets, location, imageName, description) {
     this.propName = propName;
     this.bed = bed;
     this.price = price;
@@ -13,17 +13,17 @@ NewProperty.prototype.toHtml = function() {
   return '<li><section class="propertyBox caption" data-price="' + this.price + '" data-bed="' + this.bed + '" + data-pets="' + this.pets + '" + data-location="' + this.location + '"><a title="' + this.description + '" href="img/' + this.imageName +'"/><img src="img/' + this.imageName + '" width="100" height="100"/></a><section class="description"><h2>' + this.propName + '</h2>' + '<ul><li>$ ' + this.price + '</li><li>' + this.bed + '</li>' + '<li>' + this.pets + '</li></ul></section></section></li>'
 }
 
-var addProperty = function(propName, bed, price, pets, location, imageName) {
-    var property = new NewProperty(propName, bed, price, pets, location, imageName);
+var addProperty = function(propName, bed, price, pets, location, imageName, description) {
+    var property = new NewProperty(propName, bed, price, pets, location, imageName, description);
     $("#listings").append(property.toHtml());
   }
 
 addProperty("Trendy Apartment",   2, 1100, "Yes", "Seattle",      "property1.jpg", "This is a dope ass apartment");
-addProperty("Total Dive",         3, 1800, "No",  "Capitol-Hill", "property2.jpg");
-addProperty("Charming Space",     2, 950,  "Yes", "Renton",       "property3.jpg");
-addProperty("Vintage Home",       3, 1500, "No",  "Renton",       "property4.jpg");
-addProperty("The Fremont Manor",  2, 1100, "Yes", "Fremont",      "property5.jpg");
-addProperty("The Love Pad",       1, 750,  "Yes", "Capitol-Hill", "property6.jpg");
+addProperty("Total Dive",         3, 1800, "No",  "Capitol-Hill", "property2.jpg", "This is a dope ass apartment");
+addProperty("Charming Space",     2, 950,  "Yes", "Renton",       "property3.jpg", "This is a dope ass apartment");
+addProperty("Vintage Home",       3, 1500, "No",  "Renton",       "property4.jpg", "This is a dope ass apartment");
+addProperty("The Fremont Manor",  2, 1100, "Yes", "Fremont",      "property5.jpg", "This is a dope ass apartment");
+addProperty("The Love Pad",       1, 750,  "Yes", "Capitol-Hill", "property6.jpg", "This is a dope ass apartment");
 
 //~~~~~~~~~~~~ FILTERS START HERE!!!!!!!!!!!!!!!!!! ~~~~~~~~~~~~~~~~
 
