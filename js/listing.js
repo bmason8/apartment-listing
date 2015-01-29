@@ -22,7 +22,7 @@ addProperty("Trendy Apartment",   2, 1100, "Yes", "Seattle",      "property1.jpg
 addProperty("Total Dive",         3, 1800, "No",  "Capitol-Hill", "property2.jpg", "This is a dope ass apartment");
 addProperty("Charming Space",     2, 950,  "Yes", "Renton",       "property3.jpg", "This is a dope ass apartment");
 addProperty("Vintage Home",       3, 1500, "No",  "Renton",       "property4.jpg", "This is a dope ass apartment");
-addProperty("The Fremont Manor",  2, 1100, "Yes", "Fremont",      "property5.jpg", "This is a dope ass apartment");
+addProperty("Fremont Manor",  2, 1100, "Yes", "Fremont",      "property5.jpg", "This is a dope ass apartment");
 addProperty("The Love Pad",       1, 750,  "Yes", "Capitol-Hill", "property6.jpg", "This is a dope ass apartment");
 
 //~~~~~~~~~~~~ FILTERS START HERE!!!!!!!!!!!!!!!!!! ~~~~~~~~~~~~~~~~

@@ -11,12 +11,13 @@
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/kickstart.css" media="all" />
   <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/animate.css" media="all" />
   <link rel="stylesheet" type="text/css" href="css/custom.css" media="all" />
 </head>
 <body>
   <div class="grid.flex">
     <header class="clearfix">
-      <nav class="main-menu col_7 float-left">
+      <nav class="main-menu col_7 animated fadeInDown">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="listing.html">Available Apartments</a></li>
@@ -28,13 +29,63 @@
       </section>
     </header>
     <main class="full-width center">
-<!--       <div class="test">
-      <a class="inline cboxElement" href="#inline_content">Inline HTML</a>
-      </div> -->
-    <a href="http://www.facebook.com"><img class="social" src="img/facebook-icon.png" /></a>
-    <a href="httP://www.twitter.com"><img class="social" src="img/twitter-icon.png" /></a>
-    <a href="http://www.google.com"><img class="social" src="img/google-plus-icon.png" /></a>
-    <a href="http://www.pinterest.com"><img class="social" src="img/pinterest-icon.png" /></a>
+      <section class="slider">
+      <!-- Slideshow -->
+      <ul class="slideshow">
+        <li><img src="img/property1.jpg" /></li>
+        <li>
+          <h2>Trendy Apartment</h2>
+          <p>Seattle, WA</p>
+          <p>$1100 per month</p>
+          <p>Pets allowed</p>
+          <p>This is a dope ass apartment</p>
+        </li>
+        <li><img src="img/property2.jpg" /></li>
+        <li>
+          <h2>Total Dive</h2>
+          <p>Capitol Hill, WA</p>
+          <p>$1800 per month</p>
+          <p>Pets not allowed</p>
+          <p>This is a dope ass apartment</p>
+        </li>
+        <li><img src="img/property3.jpg" /></li>
+        <li>
+          <h2>Charming Space</h2>
+          <p>Renton, WA</p>
+          <p>$950 per month</p>
+          <p>Pets allowed</p>
+          <p>This is a dope ass apartment</p>
+        </li>
+        <li><img src="img/property4.jpg" /></li>
+        <li>
+          <h2>Vintage Home</h2>
+          <p>Capitol Hill, WA</p>
+          <p>$1500 per month</p>
+          <p>Pets not allowed</p>
+          <p>This is a dope ass apartment</p>
+        </li>
+        <li><img src="img/property5.jpg" /></li>
+        <li>
+          <h2>Fremont Manor</h2>
+          <p>Fremont, WA</p>
+          <p>$1100 per month</p>
+          <p>Pets allowed</p>
+          <p>This is a dope ass apartment</p>
+        </li>
+        <li><img src="img/property6.jpg" /></li>
+        <li>
+          <h2>The Love Pad</h2>
+          <p>Capitol Hill, WA</p>
+          <p>$750 per month</p>
+          <p>Pets allowed</p>
+          <p>This is a dope ass apartment</p>
+        </li>
+      </ul>
+    </slider>
+      <a href="http://www.facebook.com"><img class="social" src="img/facebook-icon.png" /></a>
+      <a href="httP://www.twitter.com"><img class="social" src="img/twitter-icon.png" /></a>
+      <a href="http://www.google.com"><img class="social" src="img/google-plus-icon.png" /></a>
+      <a href="http://www.pinterest.com"><img class="social" src="img/pinterest-icon.png" /></a>
     </main>
     <footer class="full-width center">
       <nav>
@@ -45,21 +96,10 @@
         </ul>
       </nav>
     </footer>
-<!--     <div style="display: none">
-      <div id='inline_content' style='padding:10px; background:#fff;'>
-      <p><strong>This content comes from a hidden element on this page.</strong></p>
-      <p>The inline option preserves bound JavaScript events and changes, and it puts the content back where it came from when it is closed.</p>
-      <p><a id="click" href="#" style='padding:5px; background:#ccc;'>Click me, it will be preserved!</a></p>
-
-      <p><strong>If you try to open a new Colorbox while it is already open, it will update itself with the new content.</strong></p>
-      <p>Updating Content Example:<br />
-      <a class="ajax" href="../content/ajax.html">Click here to load new content</a></p>
-      </div>
-     </div> -->
-    <!-- Javascript -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="js/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="js/kickstart.js"></script>
+    <script type="text/javascript" src="js/menus.js"></script>
     <script type="text/javascript" src="js/test.js"></script>
   </div>
 </body>

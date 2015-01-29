@@ -34,6 +34,10 @@ p {
   margin: 1% 20% auto auto;
 }
 
+h2 {
+  font-family: 'Amaranth', sans-serif;
+}
+
 nav li {
   display: inline;
   list-style-type: none;
@@ -57,10 +61,8 @@ footer {
   height: 80px;
   width: 100%;
   background-color: #1693A5;;
-  /*position:absolute;*/
   bottom: 0;
   padding-top: 2%;
-  /*height: 12%;*/
   font-size: 1.25em;
 }
 
@@ -77,19 +79,22 @@ footer {
 }
 
 .main-menu ul{
-margin: 4% auto auto 25%;
+margin: 4% auto auto 50%;
 font-size: 2em;
 min-width: 600px;
 display: inline-block;
-}
-
-.main-site ul {
-  /*margin-bottom: 105px;*/
+word-spacing: 11px;
 }
 
 .logo {
   display: inline-block;
   margin: 0 15% 0% auto;
+}
+
+.slider {
+  margin: 5% auto 0 auto;
+  width: 100%;
+  max-width: 550px;
 }
 
 .apartment-gallery {
@@ -98,17 +103,13 @@ display: inline-block;
 }
 
 .social {
-  padding-top: 31%;
-  margin: 0 auto;
+  padding: 0 0 2% 0;
+  min-height: 50px;
+  margin: 2% auto 0 auto
 }
 
 .apartment-gallery li {
   list-style: none;
-  /*display: inline-block;*/
-}
-
-.apartment-gallery {
-  /*display: inline-block;*/
 }
 
 .propertyBox {
@@ -119,14 +120,12 @@ display: inline-block;
 }
 
 .propertyBox h2 {
-  /*float: right;*/
   font-size: 1.5em;
   display: block;
   margin-bottom: 0;
 }
 
 .propertyBox p {
-  /*float: right;*/
   font-size: 1em;
   display: inline-block;
   width: 600px;
@@ -152,6 +151,49 @@ display: inline-block;
   float: right;
   margin-right: 25%;
   text-align: left;
+}
+
+.apartment-gallery :nth-last-child(2) > section > ul {
+  margin-left: 30px;
+}
+
+.apartment-gallery :nth-last-child(2) > a {
+  margin-left: 27px;
+}
+
+.apartment-gallery :nth-last-child(4) > a {
+  margin-left: 27px;
+}
+
+.apartment-gallery :first-child a {
+  margin-left: 35px;
+}
+
+.apartment-gallery :first-child > section > ul {
+  margin-left: 30px;
+}
+
+.apartment-gallery :nth-last-child(4) > section > ul {
+  margin-left: 30px;
+}
+
+.slideshow {
+  background-color: #1793a6;
+}
+
+.slideshow img {
+  max-height: 100%;
+}
+
+.slideshow p {
+  font-family: 'Amaranth', sans-serif;
+  text-align: left;
+  margin-left: 8%;
+  line-height: 150%;
+}
+
+.slideshow :last-child {
+  font-size: 1.25em;
 }
 
 @media (max-width: 850px) {
