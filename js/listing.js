@@ -28,7 +28,7 @@ addProperty("The Love Pad",       1, 750,  "Yes", "Capitol-Hill", "property6.jpg
 
 /* this function is used for a basic filter search by the user. The user only searches using the city drop down list */
   function locationSearch() {
-    $(".property").each(function() {
+    $(".propertyBox").each(function() {
       if (($(this).data("location")) != ($("#locationSelect").val())) {
           $(this).fadeOut(1000);
       }
@@ -50,7 +50,7 @@ addProperty("The Love Pad",       1, 750,  "Yes", "Capitol-Hill", "property6.jpg
   /*this function will be called if user selects checkbox that states 
   he or she owns a pet and would like to filter the apartment listings based off pet availability*/
   function petCheckbox() {
-    $(".property").each(function() {
+    $(".propertyBox").each(function() {
       if ($(this).data("pets") != "yes") {
         $(this).fadeOut(1000);
       }
@@ -58,7 +58,7 @@ addProperty("The Love Pad",       1, 750,  "Yes", "Capitol-Hill", "property6.jpg
   }
   /*this function will be called in the locationSearch function. depending on the user's selection, a specific case will be run. */
   function bedSelector() {
-    $(".property").each(function() {
+    $(".propertyBox").each(function() {
       if ($(this).data("bed") != ($("#bed").val())) {
         $(this).fadeOut(1000);
       }
@@ -71,7 +71,7 @@ addProperty("The Love Pad",       1, 750,  "Yes", "Capitol-Hill", "property6.jpg
     var minPrice = document.getElementById('min-price').value;
     var maxPrice = document.getElementById('max-price').value;
 
-    $(".property").each(function() {
+    $(".propertyBox").each(function() {
       if ($(this).data("price") < minPrice && minPrice != "") {
         $(this).fadeOut(1000);
       }
