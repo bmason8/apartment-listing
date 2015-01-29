@@ -1,70 +1,24 @@
 $(function() {
-  // function hide(element) {
-  //   $(this).fadeOut(1000);
-  // }
   /* this function is used for a basic filter search by the user. The user only searches using the city drop down list */
   function locationSearch() {
-  	switch ($("#locationSelect").val()) {
-  		case "seattle":
-  			$(".property").each(function() {
-  				if (($(this).data("location") != "seattle")) {
-              $(this).fadeOut(1000);
-          }
-          if ($("input:checkbox").is(":checked")) {
-            //call this function only if checkbox is selected
-            petCheckbox();
-          }
-          if ($("#bed option:selected")) {
-            //call this function if bed selector is selected
-            bedSelector();
-          }
-          if (($("#min-price").val() != "") || ($("#max-price").val() != "")) {
-            //call this function if input text has values
-            priceFilter();
-            // console.log("i'm working");
-          }
-  			});
-  		break;
-  		case "renton":
-  			$(".property").each(function() {
-  				if ($(this).data("location") != "renton") {
-  					$(this).fadeOut(1000);
-  				}
-          if ($("input:checkbox").is(":checked")) {
-            //call this function only if checkbox is selected
-            petCheckbox();
-          }
-          if ($("#bed option:selected")) {
-            //call this function if bed selector is selected
-            bedSelector();
-          }
-  			});	
-   		break;
-  		case "capitolHill":
-  			$(".property").each(function() {
-  				if ($(this).data("location") != "capitolHill") {
-  					$(this).fadeOut(1000);
-  				}
-          if ($("input:checkbox").is(":checked")) {
-            //call this function only if checkbox is selected
-            petCheckbox();
-          }
-  			});	
-  		break;
-      case "fremont":
-        $(".property").each(function() {
-          if ($(this).data("location") != "fremont") {
-            $(this).fadeOut(1000);
-          }
-          if ($("input:checkbox").is(":checked")) {
-            //call this function only if checkbox is selected
-            petCheckbox();
-          }
-        }); 
-      break;
-  		default:
-  			alert("Nothing is Selected!!");
-  	}
+		$(".property").each(function() {
+			if (($(this).data("location")) != ($("#locationSelect").val())) {
+          $(this).fadeOut(1000);
+      }
+      if ($("input:checkbox").is(":checked")) {
+        //call this function only if checkbox is selected
+        petCheckbox();
+      }
+      if ($("#bed option:selected")) {
+        //call this function if bed selector is selected
+        bedSelector();
+      }
+      if (($("#min-price").val() != "") || ($("#max-price").val() != "")) {
+        //call this function if input text has values
+        priceFilter();
+        // console.log("i'm working");
+      }
+		});
   }
   /*this function will be called if user selects checkbox that states 
   he or she owns a pet and would like to filter the apartment listings based off pet availability*/
@@ -77,36 +31,11 @@ $(function() {
   }
   /*this function will be called in the locationSearch function. depending on the user's selection, a specific case will be run. */
   function bedSelector() {
-    switch ($("#bed").val()) {
-      case "studio":
-        $(".property").each(function() {
-          if ($(this).data("bed") != "studio") {
-            $(this).fadeOut(1000);
-          }
-        });
-      break;
-      case "1bed":
-        $(".property").each(function() {
-          if ($(this).data("bed") != "1bed") {
-            $(this).fadeOut(1000);
-          }
-        });
-      break;
-      case "2beds":
-        $(".property").each(function() {
-          if ($(this).data("bed") != "2beds") {
-            $(this).fadeOut(1000);
-          }
-        });
-      break;
-      case "3beds":
-      $(".property").each(function() {
-          if ($(this).data("bed") != "3beds") {
-            $(this).fadeOut(1000);
-          }
-        });
-      break;
-    }
+    $(".property").each(function() {
+      if ($(this).data("bed") != ($("#bed").val())) {
+        $(this).fadeOut(1000);
+      }
+    });
   }
 
 /*this function is to filter listings based off of the user's minimum price and maximum price that are placed in the input text element */
@@ -122,20 +51,6 @@ $(function() {
       if ($(this).data("price") > maxPrice && maxPrice != "") {
         $(this).fadeOut(1000);
       }
-      // if ($(this).data("price") > minPrice) {
-      //   $(this).fadeOut(1000);
-      // }
-      // if ($(this).data("price") > maxPrice) {
-      //   $(this).fadeOut(1000);
-      // }
-      // if ($(this).data("price") < maxPrice) {
-      //   $(this).fadeOut(1000);
-      // }      
-      // if (($(this).data("price") >= minPrice) && ($(this).data("price") < maxPrice)) {
-      //   if (($(this).data("price") < minPrice) && ($(this).data("price") > maxPrice)) {
-      //     $(this).fadeOut(1000);
-      //   }
-      // } 
     });
   }
   
