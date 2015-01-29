@@ -18,9 +18,10 @@ $(function() {
             //call this function if bed selector is selected
             bedSelector();
           }
-          if (!($("input:text[value='']"))) {
+          if (($("input:text[value='']"))) {
             //call this function if input text has values
             priceFilter();
+            // console.log("i'm working");
           }
   			});
   		break;
@@ -119,18 +120,21 @@ $(function() {
         if ($(this).data("price") < minPrice) {
           $(this).fadeOut(1000);
         }
-      } else if (($(this).data("price") >= minPrice) && ($(this).data("price") < maxPrice)) {
+      } else if (($(this).data("price") > minPrice) && ($(this).data("price") <= maxPrice)) {
         if ($(this).data("price") < minPrice) {
           $(this).fadeOut(1000);
         }
         if ($(this).data("price") > maxPrice) {
           $(this).fadeOut(1000);
         }
-      } else if ($(this).data("price") > maxPrice)  {
-          $(this).fadeOut(1000);
       } else {
-        console.log("still show listings");
+        if ($(this).data("price") > maxPrice)  {
+          $(this).fadeOut(1000);
+        }
       }
+      // } else {
+      //   console.log("still show listings");
+      // }
     });
   }
   
