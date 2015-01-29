@@ -51,14 +51,14 @@ addProperty("The Love Pad",       1, 750,  "Yes", "Capitol-Hill", "property6.jpg
   he or she owns a pet and would like to filter the apartment listings based off pet availability*/
   function petCheckbox() {
     $(".propertyBox").each(function() {
-      if ($(this).data("pets") != "yes") {
+      if ($(this).data("pets") != "Yes") {
         $(this).fadeOut(1000);
       }
     });
   }
   /*this function will be called in the locationSearch function. depending on the user's selection, a specific case will be run. */
   function bedSelector() {
-    $(".propertyBox").each(function() {
+    $("#filters .propertyBox").each(function() {
       if ($(this).data("bed") != ($("#bed").val())) {
         $(this).fadeOut(1000);
       }
