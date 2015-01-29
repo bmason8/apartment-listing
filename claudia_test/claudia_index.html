@@ -29,8 +29,8 @@
         <option value="3bed">3 beds</option>
       </select>
       <input type="checkbox" data-pets="true">I own a pet!</input>
-      <input type="text" placeholder="Min Price"></input>
-      <input type="text" placeholder="Max Price"></input>
+      <input id="min-price" type="text" placeholder="Min Price"></input>
+      <input id="max-price" type="text" placeholder="Max Price"></input>
       <button id="list">SUBMIT</button>
     </div>
     
@@ -38,25 +38,25 @@
     <div class="property" id="" data-location="seattle" data-price="800" data-pets="yes" data-bed="studio">
       <img src="">
       <ul>
-        <li>Location: Seattle</li>
+        <li>Location: Seattle $800</li>
       </ul>
     </div>
     <div class="property" id="" data-location="seattle" data-price="900" data-pets="no" data-bed="1bed">
       <img src="">
       <ul>
-        <li>Location: Seattle</li>
+        <li>Location: Seattle $900</li>
       </ul>
     </div>
-    <div class="property" id="" data-location="renton" data-price="850" data-pets="yes">
+    <div class="property" id="" data-location="renton" data-price="850" data-pets="yes" data-bed="studio">
       <img src="">
       <ul>
-        <li>Location: Renton</li>
+        <li>Location: Renton $850</li>
       </ul>
     </div>
-    <div class="property" id="" data-location="renton" data-price="1000" data-pets="no">
+    <div class="property" id="" data-location="renton" data-price="1000" data-pets="no" data-bed="2bed">
       <img src="">
       <ul>
-        <li>Location: Renton</li>
+        <li>Location: Renton $1000</li>
       </ul>
     </div>
     <div class="property" id="" data-location="capitolHill" data-price="900" data-pets="yes">
@@ -86,6 +86,6 @@
     </main>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   
-  <script type="text/javascript" src="js/claudia_listing.js"></script>
+  <script type="text/javascript" src="claudia_listing.js"></script>
 </body>
 </html>
