@@ -18,7 +18,7 @@ $(function() {
             //call this function if bed selector is selected
             bedSelector();
           }
-          if ($("input:text[value='']")) {
+          if (($("#min-price").val() != "") || ($("#max-price").val() != "")) {
             //call this function if input text has values
             priceFilter();
             // console.log("i'm working");
@@ -116,13 +116,10 @@ $(function() {
     var maxPrice = document.getElementById('max-price').value;
 
     $(".property").each(function() {
-      if (($("#min-price").val() == "") && ($("#max-price").val() == "")) {
-        $(".property").show();
-      }
-      if ($(this).data("price") < minPrice) {
+      if ($(this).data("price") < minPrice && minPrice != "") {
         $(this).fadeOut(1000);
       }
-      if ($(this).data("price") > maxPrice) {
+      if ($(this).data("price") > maxPrice && maxPrice != "") {
         $(this).fadeOut(1000);
       }
       // if ($(this).data("price") > minPrice) {
