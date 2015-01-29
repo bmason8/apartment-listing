@@ -116,25 +116,18 @@ $(function() {
     var maxPrice = document.getElementById('max-price').value;
 
     $(".property").each(function() {
-      if ($(this).data("price") <= minPrice) {
-        if ($(this).data("price") < minPrice) {
-          $(this).fadeOut(1000);
-        }
-      } else if (($(this).data("price") > minPrice) && ($(this).data("price") <= maxPrice)) {
-        if ($(this).data("price") < minPrice) {
-          $(this).fadeOut(1000);
-        }
-        if ($(this).data("price") > maxPrice) {
-          $(this).fadeOut(1000);
-        }
-      } else {
-        if ($(this).data("price") > maxPrice)  {
-          $(this).fadeOut(1000);
-        }
+      if ($(this).data("price") < minPrice) {
+        $(this).fadeOut(1000);
       }
-      // } else {
-      //   console.log("still show listings");
-      // }
+      if ($(this).data("price") > maxPrice) {
+        $(this).fadeOut(1000);
+      }
+      
+      // if (($(this).data("price") >= minPrice) && ($(this).data("price") < maxPrice)) {
+      //   if (($(this).data("price") < minPrice) && ($(this).data("price") > maxPrice)) {
+      //     $(this).fadeOut(1000);
+      //   }
+      // } 
     });
   }
   
