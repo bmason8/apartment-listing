@@ -21,7 +21,7 @@ addProperty("Trendy Apartment",     0, 1100, "Yes", "Seattle",      "property1.j
 addProperty("Total Dive",           3, 1800, "No",  "Capitol-Hill", "property2.jpg",  "This place is horrifically dirty but if you're a tough sob it'll do.");
 addProperty("Charming Space",       0, 950,  "Yes", "Renton",       "property3.jpg",  "Cute little apartment in the heart of of Renton.");
 addProperty("Modern Lodge",         3, 1800, "No",  "Renton",       "property4.jpg",  "It's old and creeky but it looks cool!");
-addProperty("The Fremont Manor",    3, 2100, "Yes", "Fremont",      "property5.jpg",  "Group living at its best. And optional orgies every Tuesday night.");
+addProperty("Fremont Manor",    3, 2100, "Yes", "Fremont",      "property5.jpg",  "Group living at its best. And optional orgies every Tuesday night.");
 addProperty("The Love Pad",         1, 750,  "Yes", "Capitol-Hill", "property6.jpg",  "Only the sexy need apply");
 addProperty("Castle",               1, 850,  "No",  "Seattle",      "property7.jpg",  "It's a castle, 'nuff said. Rent it and be a baller who live in a castle.");
 addProperty("Capitol-Hill Home",    3, 5000, "No",  "Capitol-Hill", "property8.jpg",  "Great house in a friendly neighbourhood.");
