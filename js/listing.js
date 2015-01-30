@@ -74,7 +74,7 @@ addProperty("Biggest Loser House",  3, 2100, "No",  "Fremont",      "property20.
   /*this function will be called in the locationSearch function. depending on the user's selection, a specific case will be run. */
   function bedSelector() {
     $("#filters .propertyBox").each(function() {
-    console.log("bed function ran");
+    // console.log("bed function ran");
       if ($(this).data("bed") != ($("#bed").val())) {
         $(this).fadeOut(1000);
       }
