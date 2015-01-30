@@ -1,4 +1,10 @@
 $(function() {
+
+  JSON.parse(localStorage.getItem("userLocation")).location
+    $("#locationSelect").val(JSON.parse(localStorage.getItem("userLocation")).location)
+  JSON.parse(localStorage.getItem("userBeds")).beds
+    $("#bed").val(JSON.parse(localStorage.getItem("userBeds")).beds)
+
 function NewProperty(propName, bed, price, pets, location, imageName, description) {
     this.propName = propName;
     this.bed = bed;
@@ -43,6 +49,9 @@ addProperty("Biggest Loser House",  3, 2100, "No",  "Fremont",      "property20.
 
 /* this function is used for a basic filter search by the user. The user only searches using the city drop down list */
   function locationSearch() {
+      localStorage.setItem('userLocation', JSON.stringify({
+        location: document.getElementById("locationSelect").value
+      }));
     $(".propertyBox").each(function() {
       if (($(this).data("location")) != ($("#locationSelect").val())) {
           $(this).fadeOut(1000);
@@ -60,6 +69,7 @@ addProperty("Biggest Loser House",  3, 2100, "No",  "Fremont",      "property20.
         priceFilter();
         // console.log("i'm working");
       }
+
     });
   }
   /*this function will be called if user selects checkbox that states
@@ -73,8 +83,10 @@ addProperty("Biggest Loser House",  3, 2100, "No",  "Fremont",      "property20.
   }
   /*this function will be called in the locationSearch function. depending on the user's selection, a specific case will be run. */
   function bedSelector() {
+    localStorage.setItem('userBeds', JSON.stringify({
+      beds : document.getElementById("bed").value
+    }));
     $("#filters .propertyBox").each(function() {
-    // console.log("bed function ran");
       if ($(this).data("bed") != ($("#bed").val())) {
         $(this).fadeOut(1000);
       }
@@ -98,6 +110,4 @@ addProperty("Biggest Loser House",  3, 2100, "No",  "Fremont",      "property20.
   }
 
   $("#list").on("click", locationSearch);
-
 });
-
