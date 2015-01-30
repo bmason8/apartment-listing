@@ -144,7 +144,7 @@ word-spacing: 11px;
 
 .propertyBox li {
   list-style: disc;
-  padding: 0;
+  padding: 0 0 5px;
 }
 
 .description {
@@ -194,6 +194,14 @@ word-spacing: 11px;
 
 .slideshow :last-child {
   font-size: 1.25em;
+}
+
+.options {
+  margin: 1% 0 0 0;
+}
+
+.options > * {
+  margin: 0 1.2% 0 1.2%;
 }
 
 @media (max-width: 850px) {
