@@ -34,6 +34,10 @@ p {
   margin: 1% 20% auto auto;
 }
 
+h1 {
+  font-family: 'Amaranth', sans-serif;
+}
+
 h2 {
   font-family: 'Amaranth', sans-serif;
 }
@@ -204,10 +208,31 @@ word-spacing: 11px;
   margin: 0 1.2% 0 1.2%;
 }
 
+.about-us {
+  font-family: 'Amaranth', sans-serif;
+  margin-bottom: 5%;
+}
+
 .about-us p {
   font-size: 1em;
   text-align: left;
-  margin: 1% 30% 0 30%
+  margin: 1% 27% 0 27%
+}
+
+.about-us h1 {
+  font-size: 4em;
+  font-weight: bold;
+}
+
+.about-us li {
+  display: inline;
+  list-style-type: none;
+  margin: 3%;
+  font-size: 1.5em;
+}
+
+.about-us img {
+  display: inline;
 }
 
 @media (max-width: 850px) {
@@ -223,3 +248,4 @@ word-spacing: 11px;
     display: inline;
   }
 }
+
