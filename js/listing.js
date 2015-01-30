@@ -28,24 +28,24 @@ var addProperty = function(propName, bed, price, pets, location, imageName, desc
   }
 
 addProperty("Trendy Apartment",     0, 1100, "Yes", "Seattle",      "property1.jpg",  "This is a dope ass apartment");
-addProperty("Total Dive",           3, 1800, "No",  "Capitol-Hill", "property2.jpg",  "This place is horrifically dirty but if you're a tough sob it'll do.");
+addProperty("Total Dive",           0, 1800, "No",  "Capitol-Hill", "property2.jpg",  "This place is horrifically dirty but if you're a tough sob it'll do.");
 addProperty("Charming Space",       0, 950,  "Yes", "Renton",       "property3.jpg",  "Cute little apartment in the heart of of Renton.");
-addProperty("Modern Lodge",         3, 1800, "No",  "Renton",       "property4.jpg",  "It's old and creeky but it looks cool!");
+addProperty("Modern Lodge",         2, 1800, "Yes",  "Renton",       "property4.jpg",  "It's old and creeky but it looks cool!");
 addProperty("Fremont Manor",        3, 2100, "Yes", "Fremont",      "property5.jpg",  "Group living at its best. And optional orgies every Tuesday night.");
 addProperty("The Love Pad",         1, 750,  "Yes", "Capitol-Hill", "property6.jpg",  "Only the sexy need apply");
-addProperty("Castle",               1, 850,  "No",  "Seattle",      "property7.jpg",  "It's a castle, 'nuff said. Rent it and be a baller who live in a castle.");
-addProperty("Capitol-Hill Home",    3, 5000, "No",  "Capitol-Hill", "property8.jpg",  "Great house in a friendly neighbourhood.");
-addProperty("Room from Saw",        1, 300,  "No",  "Renton",       "property9.jpg",  "This place is comparable to a nightmare, you won't be able to sleep much.");
+addProperty("Castle",               1, 850,  "Yes",  "Seattle",      "property7.jpg",  "It's a castle, 'nuff said. Rent it and be a baller who live in a castle.");
+addProperty("Capitol-Hill Home",    2, 5000, "No",  "Capitol-Hill", "property8.jpg",  "Great house in a friendly neighbourhood.");
+addProperty("Room from Saw",        1, 300,  "Yes",  "Renton",       "property9.jpg",  "This place is comparable to a nightmare, you won't be able to sleep much.");
 addProperty("Pope's Palace",        1, 1800, "No",  "Seattle",      "property10.jpg", "Availability is extremely limited but it's a wonderful space if you are accepted.");
 addProperty("Survivor Hut",         0, 200,  "No",  "Fremont",      "property11.jpg", "Test your wit and deception by living underneath this leaf hut.");
 addProperty("Homey Home",           3, 1750, "No",  "Capitol-Hill", "property12.jpg", "Spacious and loving home perfect for a close group of friends.");
-addProperty("Haunted House",        2, 1100, "No",  "capitolHill",  "property13.jpg", "Frequently frequented by ghoules and ghosts but other than that it is a wonderful house.");
-addProperty("Trendy Space",         1, 1300, "No",  "Renton",       "property14.jpg", "This place is perfect for hipsters.");
-addProperty("The Shire",            1, 900,  "No",  "Seattle",      "property15.jpg", "Stay warm in the winter and cool in the summer while living under this cozy grassy knoll. ");
+addProperty("Haunted House",        2, 1100, "No",  "Capitol-Hill",  "property13.jpg", "Frequently frequented by ghoules and ghosts but other than that it is a wonderful house.");
+addProperty("Trendy Space",         3, 1700, "Yes",  "Renton",       "property14.jpg", "This place is perfect for hipsters.");
+addProperty("The Shire",            1, 5000,  "No",  "Seattle",      "property15.jpg", "Stay warm in the winter and cool in the summer while living under this cozy grassy knoll. ");
 addProperty("Cozy Igloo",           2, 750,  "No",  "Seattle",      "property16.jpg", "This place is great eh!");
 addProperty("Master suite",         0, 1250, "No",  "Fremont",      "property17.jpg", "Upscale and very fancy. Only rich people who walk their cats will be accepted.");
 addProperty("Cool Apartment",       2, 1200, "No",  "Seattle",      "property18.jpg", "It's pretty cool so you should apply quickly.");
-addProperty("Renton Home",          3, 1900, "No",  "Renton",       "property19.jpg", "Big home with lots of bathrooms and a hot tub time machine.");
+addProperty("Renton Home",          3, 1900, "Yes",  "Renton",       "property19.jpg", "Big home with lots of bathrooms and a hot tub time machine.");
 addProperty("Biggest Loser House",  3, 2100, "No",  "Fremont",      "property20.jpg", "Get temporarily fit in this intense living arrangement. Only +300 pounders need apply.");
 
 
