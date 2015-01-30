@@ -40,7 +40,6 @@
     </select> -->
     <div id="filters" class="options full-width">
       <select id="locationSelect" class="label.col_3">
-        <option>[Select City]</option>
         <option value="Seattle" id="seattle">Seattle</option>
         <option value="Renton" id="renton">Renton</option>
         <option value="Capitol-Hill" id="capitolHill">Capitol Hill</option>
@@ -48,12 +47,12 @@
       </select>
       <select id ="bed">
           <option>Choose Beds</option>
-          <option value="0">Studio</option>
-          <option value="1">1 bed</option>
-          <option value="2">2 beds</option>
-          <option value="3">3 beds</option>
+          <option value="0" data-bed="0">Studio</option>
+          <option value="1" data-bed="1">1 bed</option>
+          <option value="2" data-bed="2">2 beds</option>
+          <option value="3" data-bed="3">3 beds</option>
       </select>
-      <input type="checkbox" data-pets="true">I own a pet!</input>
+      <input type="checkbox" data-pets="Yes">I own a pet!</input>
       <input id="min-price" type="text" placeholder="Min Price"></input>
       <input id="max-price" type="text" placeholder="Max Price"></input>
       <button id="list">SUBMIT</button>
@@ -85,8 +84,8 @@
       <nav>
         <ul>
           <li><a href="about.html">About Us</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms of Use</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
         </ul>
       </nav>
     </footer>

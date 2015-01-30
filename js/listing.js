@@ -111,4 +111,3 @@ addProperty("Biggest Loser House",  3, 2100, "No",  "Fremont",      "property20.
 
   $("#list").on("click", locationSearch);
 });
-
