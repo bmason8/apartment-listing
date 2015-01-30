@@ -13,7 +13,7 @@ $('.social').hover(function() {
 });
 
 $('.main-menu li').hover(function() {
-  $(this).toggleClass('animated shake');
+  $(this).toggleClass('animated pulse');
 });
 
 
