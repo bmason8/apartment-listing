@@ -1,9 +1,12 @@
 $(function() {
 
-  JSON.parse(localStorage.getItem("userLocation")).location
+  if (localStorage.getItem == null) {
+    // JSON.parse(localStorage.getItem("userLocation")).location
     $("#locationSelect").val(JSON.parse(localStorage.getItem("userLocation")).location)
-  JSON.parse(localStorage.getItem("userBeds")).beds
+    // JSON.parse(localStorage.getItem("userBeds")).beds
     $("#bed").val(JSON.parse(localStorage.getItem("userBeds")).beds)
+    }
+
 
 function NewProperty(propName, bed, price, pets, location, imageName, description) {
     this.propName = propName;
@@ -44,6 +47,7 @@ addProperty("Master suite",         0, 1250, "No",  "Fremont",      "property17.
 addProperty("Cool Apartment",       2, 1200, "No",  "Seattle",      "property18.jpg", "It's pretty cool so you should apply quickly.");
 addProperty("Renton Home",          3, 1900, "No",  "Renton",       "property19.jpg", "Big home with lots of bathrooms and a hot tub time machine.");
 addProperty("Biggest Loser House",  3, 2100, "No",  "Fremont",      "property20.jpg", "Get temporarily fit in this intense living arrangement. Only +300 pounders need apply.");
+
 
 //~~~~~~~~~~~~ FILTERS START HERE!!!!!!!!!!!!!!!!!! ~~~~~~~~~~~~~~~~
 
