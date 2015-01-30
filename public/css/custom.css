@@ -1,0 +1,219 @@
+/*Custom CSS Page*/
+@import url(http://fonts.googleapis.com/css?family=Amaranth:700,400);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+  background-color: #70DBDB;
+  /*margin: 0 auto;*/
+  margin: 0 0 80px; /* bottom = footer height */
+  background-image: url(../img/background-apartment.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+  display: inline-block;
+}
+
+header {
+  background-color: #1693A5;
+  max-height: 20%;
+}
+
+p {
+  text-align: right;
+  font-size: 2em;
+  margin: 1% 20% auto auto;
+}
+
+h2 {
+  font-family: 'Amaranth', sans-serif;
+}
+
+nav li {
+  display: inline;
+  list-style-type: none;
+  padding: 2%;
+  font-family: 'Amaranth', sans-serif;
+}
+
+nav a {
+  text-decoration: none;
+  color: #F1EDD0;
+}
+
+nav a:hover {
+  color: #ffb347;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 80px;
+  width: 100%;
+  background-color: #1693A5;;
+  bottom: 0;
+  padding-top: 2%;
+  font-size: 1.25em;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.full-width {
+  width:100%;
+}
+
+.main-menu ul{
+margin: 4% auto auto 50%;
+font-size: 2em;
+min-width: 600px;
+display: inline-block;
+word-spacing: 11px;
+}
+
+.logo {
+  display: inline-block;
+  margin: 0 15% 0% auto;
+}
+
+.slider {
+  margin: 5% auto 0 auto;
+  width: 100%;
+  max-width: 550px;
+}
+
+.apartment-gallery {
+  margin: 0 15% 0 15%;
+  height: 100%;
+}
+
+.social {
+  padding: 0 0 2% 0;
+  min-height: 50px;
+  margin: 2% auto 0 auto
+}
+
+.apartment-gallery li {
+  list-style: none;
+}
+
+.propertyBox {
+  background-color: hsla(187, 24%, 0%, 0.33);
+  width: 450px;
+  margin: 4% 3% 0 0;
+  border-radius: 10px;
+}
+
+.propertyBox h2 {
+  font-size: 1.5em;
+  display: block;
+  margin-bottom: 0;
+}
+
+.propertyBox p {
+  font-size: 1em;
+  display: inline-block;
+  width: 600px;
+}
+
+.propertyBox img {
+  float: left;
+  margin-top: 100px;
+}
+
+.propertyBox ul {
+  width: 130px;
+  margin: 0;
+  float: left;
+}
+
+.propertyBox li {
+  list-style: disc;
+  padding: 0 0 5px;
+}
+
+.description {
+  float: right;
+  margin-right: 25%;
+  text-align: left;
+}
+
+.apartment-gallery :nth-last-child(2) > section > ul {
+  margin-left: 30px;
+}
+
+.apartment-gallery :nth-last-child(2) > a {
+  margin-left: 27px;
+}
+
+.apartment-gallery :nth-last-child(4) > a {
+  margin-left: 27px;
+}
+
+.apartment-gallery :first-child a {
+  margin-left: 35px;
+}
+
+.apartment-gallery :first-child > section > ul {
+  margin-left: 30px;
+}
+
+.apartment-gallery :nth-last-child(4) > section > ul {
+  margin-left: 30px;
+}
+
+.slideshow {
+  background-color: #1793a6;
+}
+
+.slideshow img {
+  max-height: 100%;
+}
+
+.slideshow p {
+  font-family: 'Amaranth', sans-serif;
+  text-align: left;
+  margin-left: 8%;
+  line-height: 150%;
+}
+
+.slideshow :last-child {
+  font-size: 1.25em;
+}
+
+.options {
+  margin: 1% 0 0 0;
+}
+
+.options > * {
+  margin: 0 1.2% 0 1.2%;
+}
+
+@media (max-width: 850px) {
+  .main-menu ul{
+    font-size: 1.5em;
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 700px) {
+  .main-menu ul{
+    margin: 4% auto auto 10%;
+    display: inline;
+  }
+}

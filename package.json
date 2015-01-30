@@ -1,0 +1,24 @@
+{
+  "name": "apartment-listing",
+  "version": "1.0.0",
+  "description": "Apartment Listings",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.11.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bmason8/apartment-listing.git"
+  },
+  "author": "Ben, Claudia, & Mike",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bmason8/apartment-listing/issues"
+  },
+  "homepage": "https://github.com/bmason8/apartment-listing"
+}

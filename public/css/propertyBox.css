@@ -1,0 +1,31 @@
+.propertyBox {
+  width: 800px;
+  height: 200px;
+  background-color: #efefef;
+}
+.propertyBox h1 {
+  font-size: 20px;
+  text-align: center;
+  background-color: #1693A5;
+  border-bottom-style: solid;
+  border-color: #ffB347;
+}
+.propertyBox ul {
+  width: 130px;
+  margin: 0;
+  float: left;
+}
+.propertyBox li {
+}
+.propertyBox img {
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  float: left;
+  margin-right: 5%;
+}
+.propertyBox p {
+  font-size: 12px;
+  width: 280px;
+  float: right;
+}
