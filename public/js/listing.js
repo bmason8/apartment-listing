@@ -1,13 +1,5 @@
 $(function() {
 
-  if (localStorage.getItem !== null) {
-    // JSON.parse(localStorage.getItem("userLocation")).location
-    $("#locationSelect").val(JSON.parse(localStorage.getItem("userLocation")).location)
-    // JSON.parse(localStorage.getItem("userBeds")).beds
-    $("#bed").val(JSON.parse(localStorage.getItem("userBeds")).beds)
-    }
-
-
 function NewProperty(propName, bed, price, pets, location, imageName, description) {
     this.propName = propName;
     this.bed = bed;
@@ -48,7 +40,12 @@ addProperty("Cool Apartment",       2, 1200, "No",  "Seattle",      "property18.
 addProperty("Renton Home",          3, 1900, "Yes",  "Renton",       "property19.jpg", "Big home with lots of bathrooms and a hot tub time machine.");
 addProperty("Biggest Loser House",  3, 2100, "No",  "Fremont",      "property20.jpg", "Get temporarily fit in this intense living arrangement. Only +300 pounders need apply.");
 
-
+if (localStorage.getItem !== null) {
+    // JSON.parse(localStorage.getItem("userLocation")).location
+    $("#locationSelect").val(JSON.parse(localStorage.getItem("userLocation")).location)
+    // JSON.parse(localStorage.getItem("userBeds")).beds
+    $("#bed").val(JSON.parse(localStorage.getItem("userBeds")).beds)
+    }
 //~~~~~~~~~~~~ FILTERS START HERE!!!!!!!!!!!!!!!!!! ~~~~~~~~~~~~~~~~
 
 /* this function is used for a basic filter search by the user. The user only searches using the city drop down list */
