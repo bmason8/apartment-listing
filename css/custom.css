@@ -235,6 +235,10 @@ word-spacing: 11px;
   display: inline;
 }
 
+/*.submit-button {
+  background-color: #F1EDD0;
+}*/
+
 @media (max-width: 850px) {
   .main-menu ul{
     font-size: 1.5em;
