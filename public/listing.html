@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- META -->
+  <title>Seattle Apartments</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="keywords" content="apartments for rent, Seattle apartments">
+  <meta name="description" content="Find the apartment you're looking for">
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="css/kickstart.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/animate.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/custom.css" media="all" />
+</head>
+<body>
+  <div class="grid.flex">
+    <header class="clearfix">
+      <nav class="main-menu col_7 float-left animated fadeInDown">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="listing.html">Available Apartments</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+      <section class="logo float-right center">
+        <img src="img/apartment-logo-small.png" />
+      </section>
+    </header>
+    <main class="main-site full-width center">
+    <div id="filters" class="options">
+      <select id="locationSelect" class="label.col_3">
+
+        <option value="Seattle" id="seattle">Seattle</option>
+        <option value="Renton" id="renton">Renton</option>
+        <option value="Capitol-Hill" id="capitolHill">Capitol Hill</option>
+        <option value="Fremont" id="fremont">Fremont</option>
+      </select>
+      <select id ="bed">
+          <option value="0" data-bed="0">Studio</option>
+          <option value="1" data-bed="1">1 bed</option>
+          <option value="2" data-bed="2">2 beds</option>
+          <option value="3" data-bed="3">3 beds</option>
+      </select>
+      <input type="checkbox" data-pets="Yes"> I own a pet!</input>
+      <input id="min-price" type="text" placeholder="Min Price"></input>
+      <input id="max-price" type="text" placeholder="Max Price"></input>
+      <button id="list" class="blue">SUBMIT</button>
+      <button id="reset-button">Reset Search</button>
+    </div>
+      <section id="listings" class="gallery col_10 apartment-gallery clearfix">
+      </section>
+      <a href="http://www.facebook.com"><img class="social" src="img/facebook-icon.png" /></a>
+      <a href="httP://www.twitter.com"><img class="social" src="img/twitter-icon.png" /></a>
+      <a href="http://www.google.com"><img class="social" src="img/google-plus-icon.png" /></a>
+      <a href="http://www.pinterest.com"><img class="social" src="img/pinterest-icon.png" /></a>
+    </main>
+    <footer class="full-width center">
+      <nav>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+        </ul>
+      </nav>
+    </footer>
+    <!-- Javascript -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/listing.js"></script>
+    <script type="text/javascript" src="js/menus.js"></script>
+    <script type="text/javascript" src="js/kickstart.js"></script>
+  </div>
+</body>
+</html>

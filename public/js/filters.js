@@ -1,8 +1,8 @@
 $(function() {
   /* this function is used for a basic filter search by the user. The user only searches using the city drop down list */
   function locationSearch() {
-		$(".property").each(function() {
-			if (($(this).data("location")) != ($("#locationSelect").val())) {
+    $(".property").each(function() {
+      if (($(this).data("location")) != ($("#locationSelect").val())) {
           $(this).fadeOut(1000);
       }
       if ($("input:checkbox").is(":checked")) {
@@ -18,7 +18,7 @@ $(function() {
         priceFilter();
         // console.log("i'm working");
       }
-		});
+    });
   }
   /*this function will be called if user selects checkbox that states 
   he or she owns a pet and would like to filter the apartment listings based off pet availability*/
