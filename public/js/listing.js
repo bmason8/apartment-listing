@@ -1,9 +1,9 @@
 $(function() {
 
   if (localStorage.getItem !== null) {
-    JSON.parse(localStorage.getItem("userLocation")).location
+    // JSON.parse(localStorage.getItem("userLocation")).location
     $("#locationSelect").val(JSON.parse(localStorage.getItem("userLocation")).location)
-    JSON.parse(localStorage.getItem("userBeds")).beds
+    // JSON.parse(localStorage.getItem("userBeds")).beds
     $("#bed").val(JSON.parse(localStorage.getItem("userBeds")).beds)
     }
 
