@@ -1,4 +1,10 @@
 $(function() {
+if (localStorage.getItem("userLocation") !== null) {
+    // JSON.parse(localStorage.getItem("userLocation")).location
+    $("#locationSelect").val(JSON.parse(localStorage.getItem("userLocation")).location)
+    // JSON.parse(localStorage.getItem("userBeds")).beds
+    $("#bed").val(JSON.parse(localStorage.getItem("userBeds")).beds)
+    }
 
 function NewProperty(propName, bed, price, pets, location, imageName, description) {
     this.propName = propName;
@@ -44,13 +50,6 @@ addProperty("Biggest Loser House",  3, 2100, "No",  "Fremont",      "property20.
 
 /* this function is used for a basic filter search by the user. The user only searches using the city drop down list */
   function locationSearch() {
-    if (localStorage.getItem !== null) {
-    // JSON.parse(localStorage.getItem("userLocation")).location
-    $("#locationSelect").val(JSON.parse(localStorage.getItem("userLocation")).location)
-    // JSON.parse(localStorage.getItem("userBeds")).beds
-    $("#bed").val(JSON.parse(localStorage.getItem("userBeds")).beds)
-    }
-    
       localStorage.setItem('userLocation', JSON.stringify({
         location: document.getElementById("locationSelect").value
       }));
