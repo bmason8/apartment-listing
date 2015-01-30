@@ -1,20 +1,19 @@
 $(function() {
-function NewProperty(propName, bed, price, pets, location, imageName, description) {
+function NewProperty(propName, bed, price, pets, location, imageName) {
     this.propName = propName;
     this.bed = bed;
     this.price = price;
     this.pets = pets;
     this.location = location;
     this.imageName = imageName;
-    this.description = description;
   }
 
 NewProperty.prototype.toHtml = function() {
-  return '<section class="float-left propertyBox caption " data-price="'+ this.price + '" data-bed="' + this.bed + '" data-pets="' + this.pets + '" data-location="' + this.location + '"><a href="img/' + this.imageName + '" title="' + this.description + '"><img src="img/' + this.imageName + '" width="100" height="100"/> </a><section class="description"><h2>' + this.propName + '</h2><ul><li>$ ' + this.price + '</li><li>Beds: ' + this.bed + '</li><li>Pets Allowed: ' + this.pets + '</li><li><button class="small" id="email">Email</button></li></ul></section></section>'
+  return '<section class="float-left propertyBox caption " data-price="'+ this.price + '" data-bed="' + this.bed + '" data-pets="' + this.pets + '" data-location="' + this.location + '"><a href="img/' + this.imageName + '" title="' + this.description + '"><img src="img/' + this.imageName + '" width="100" height="100"/> </a><section class="description"><h2>' + this.propName + '</h2><ul><li>$ ' + this.price + '</li><li>Beds: ' + this.bed + '</li><li>Pets Allowed: ' + this.pets + '</li></ul></section></section>'
 }
 
-var addProperty = function(propName, bed, price, pets, location, imageName, description) {
-    var property = new NewProperty(propName, bed, price, pets, location, imageName, description);
+var addProperty = function(propName, bed, price, pets, location, imageName) {
+    var property = new NewProperty(propName, bed, price, pets, location, imageName);
     $("#listings").append(property.toHtml());
   }
 
@@ -98,8 +97,6 @@ addProperty("Biggest Loser House",  3, 2100, "No",  "Fremont",      "property20.
   }
 
   $("#list").on("click", locationSearch);
-
-  // $("#email").on("click", location.href('mailto:brook@codefellows.org'))
 
 });
 
