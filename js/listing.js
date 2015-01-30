@@ -1,19 +1,20 @@
 $(function() {
-function NewProperty(propName, bed, price, pets, location, imageName) {
+function NewProperty(propName, bed, price, pets, location, imageName, description) {
     this.propName = propName;
     this.bed = bed;
     this.price = price;
     this.pets = pets;
     this.location = location;
     this.imageName = imageName;
+    this.description = description;
   }
 
 NewProperty.prototype.toHtml = function() {
   return '<section class="float-left propertyBox caption " data-price="'+ this.price + '" data-bed="' + this.bed + '" data-pets="' + this.pets + '" data-location="' + this.location + '"><a href="img/' + this.imageName + '" title="' + this.description + '"><img src="img/' + this.imageName + '" width="100" height="100"/> </a><section class="description"><h2>' + this.propName + '</h2><ul><li>$ ' + this.price + '</li><li>Beds: ' + this.bed + '</li><li>Pets Allowed: ' + this.pets + '</li></ul></section></section>'
 }
 
-var addProperty = function(propName, bed, price, pets, location, imageName) {
-    var property = new NewProperty(propName, bed, price, pets, location, imageName);
+var addProperty = function(propName, bed, price, pets, location, imageName, description) {
+    var property = new NewProperty(propName, bed, price, pets, location, imageName, description);
     $("#listings").append(property.toHtml());
   }
 
@@ -21,7 +22,7 @@ addProperty("Trendy Apartment",     0, 1100, "Yes", "Seattle",      "property1.j
 addProperty("Total Dive",           3, 1800, "No",  "Capitol-Hill", "property2.jpg",  "This place is horrifically dirty but if you're a tough sob it'll do.");
 addProperty("Charming Space",       0, 950,  "Yes", "Renton",       "property3.jpg",  "Cute little apartment in the heart of of Renton.");
 addProperty("Modern Lodge",         3, 1800, "No",  "Renton",       "property4.jpg",  "It's old and creeky but it looks cool!");
-addProperty("Fremont Manor",    3, 2100, "Yes", "Fremont",      "property5.jpg",  "Group living at its best. And optional orgies every Tuesday night.");
+addProperty("Fremont Manor",        3, 2100, "Yes", "Fremont",      "property5.jpg",  "Group living at its best. And optional orgies every Tuesday night.");
 addProperty("The Love Pad",         1, 750,  "Yes", "Capitol-Hill", "property6.jpg",  "Only the sexy need apply");
 addProperty("Castle",               1, 850,  "No",  "Seattle",      "property7.jpg",  "It's a castle, 'nuff said. Rent it and be a baller who live in a castle.");
 addProperty("Capitol-Hill Home",    3, 5000, "No",  "Capitol-Hill", "property8.jpg",  "Great house in a friendly neighbourhood.");
@@ -43,7 +44,7 @@ addProperty("Biggest Loser House",  3, 2100, "No",  "Fremont",      "property20.
 /* this function is used for a basic filter search by the user. The user only searches using the city drop down list */
   function locationSearch() {
     $(".propertyBox").each(function() {
-      if (($(this).data("location")) != ($("#locationSelect").val())) {
+      if (($(this).data("location")) != ($("#locationSelect").val()) && (!$("option:first").hasClass("notValid"))) {
           $(this).fadeOut(1000);
       }
       if ($("input:checkbox").is(":checked")) {
