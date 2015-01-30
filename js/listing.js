@@ -44,7 +44,7 @@ addProperty("Biggest Loser House",  3, 2100, "No",  "Fremont",      "property20.
 /* this function is used for a basic filter search by the user. The user only searches using the city drop down list */
   function locationSearch() {
     $(".propertyBox").each(function() {
-      if (($(this).data("location")) != ($("#locationSelect").val()) && (!$("option:first").hasClass("notValid"))) {
+      if (($(this).data("location")) != ($("#locationSelect").val())) {
           $(this).fadeOut(1000);
       }
       if ($("input:checkbox").is(":checked")) {
@@ -73,7 +73,7 @@ addProperty("Biggest Loser House",  3, 2100, "No",  "Fremont",      "property20.
   }
   /*this function will be called in the locationSearch function. depending on the user's selection, a specific case will be run. */
   function bedSelector() {
-    $(".propertyBox").each(function() {
+    $("#filters .propertyBox").each(function() {
     console.log("bed function ran");
       if ($(this).data("bed") != ($("#bed").val())) {
         $(this).fadeOut(1000);
