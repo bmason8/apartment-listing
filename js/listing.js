@@ -43,6 +43,10 @@ addProperty("Biggest Loser House",  3, 2100, "No",  "Fremont",      "property20.
 
 /* this function is used for a basic filter search by the user. The user only searches using the city drop down list */
   function locationSearch() {
+      localStorage.setItem('userLocation', JSON.stringify({
+        location: document.getElementById("locationSelect").value
+        }));
+    // var userLocation = localStorage.getItem('location');
     $(".propertyBox").each(function() {
       if (($(this).data("location")) != ($("#locationSelect").val())) {
           $(this).fadeOut(1000);
@@ -60,6 +64,7 @@ addProperty("Biggest Loser House",  3, 2100, "No",  "Fremont",      "property20.
         priceFilter();
         // console.log("i'm working");
       }
+
     });
   }
   /*this function will be called if user selects checkbox that states
@@ -79,6 +84,9 @@ addProperty("Biggest Loser House",  3, 2100, "No",  "Fremont",      "property20.
         $(this).fadeOut(1000);
       }
     });
+    localStorage.setItem('userBeds', JSON.stringify({
+     beds : document.getElementById("bed").value
+    }));
   }
 
 /*this function is to filter listings based off of the user's minimum price and maximum price that are placed in the input text element */
@@ -95,9 +103,22 @@ addProperty("Biggest Loser House",  3, 2100, "No",  "Fremont",      "property20.
         $(this).fadeOut(1000);
       }
     });
+    // localStorage.setItem('userMinPrice', JSON.stringify({
+    //  minimumPrice : document.getElementById("min-price").value,
+    //  maximumPrice : document.getElementById("max-price").value
+    // }));
   }
 
   $("#list").on("click", locationSearch);
+
+
+
+
+
+
+
+
+
 
 });
 
