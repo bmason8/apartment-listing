@@ -207,7 +207,7 @@ word-spacing: 11px;
 .about-us p {
   font-size: 1em;
   text-align: left;
-  margin: 1% 15% 0 15%
+  margin: 1% 30% 0 30%
 }
 
 @media (max-width: 850px) {
