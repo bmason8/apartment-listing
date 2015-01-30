@@ -86,7 +86,7 @@ addProperty("Biggest Loser House",  3, 2100, "No",  "Fremont",      "property20.
     localStorage.setItem('userBeds', JSON.stringify({
       beds : document.getElementById("bed").value
     }));
-    $("#filters .propertyBox").each(function() {
+    $(".propertyBox").each(function() {
       if ($(this).data("bed") != ($("#bed").val())) {
         $(this).fadeOut(1000);
       }
