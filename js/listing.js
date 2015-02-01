@@ -1,6 +1,6 @@
 $(function() {
 
-  if (localStorage.getItem == null) {
+  if (localStorage.getItem("userLocation") !== null) {
     // JSON.parse(localStorage.getItem("userLocation")).location
     $("#locationSelect").val(JSON.parse(localStorage.getItem("userLocation")).location)
     // JSON.parse(localStorage.getItem("userBeds")).beds
